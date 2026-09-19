@@ -6,6 +6,13 @@
 	objectVersion = 110;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		007A388E305CC7C100FFB668 /* MKSwiftBleModule in Frameworks */ = {isa = PBXBuildFile; productRef = 007A388D305CC7C100FFB668 /* MKSwiftBleModule */; };
+		007A3891305CC85C00FFB668 /* MKSwiftBeaconXCustomUI in Frameworks */ = {isa = PBXBuildFile; productRef = 007A3890305CC85C00FFB668 /* MKSwiftBeaconXCustomUI */; };
+		007A3894305CC89B00FFB668 /* NordicDFU in Frameworks */ = {isa = PBXBuildFile; productRef = 007A3893305CC89B00FFB668 /* NordicDFU */; };
+		007A3BA5305CD93600FFB668 /* GRDB in Frameworks */ = {isa = PBXBuildFile; productRef = 007A3BA4305CD93600FFB668 /* GRDB */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		009334EB305BF0B60077D2FB /* MKBeaconXPlusSwiftProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MKBeaconXPlusSwiftProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -22,6 +29,10 @@
 		009334E8305BF0B60077D2FB /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			files = (
+				007A3891305CC85C00FFB668 /* MKSwiftBeaconXCustomUI in Frameworks */,
+				007A3894305CC89B00FFB668 /* NordicDFU in Frameworks */,
+				007A388E305CC7C100FFB668 /* MKSwiftBleModule in Frameworks */,
+				007A3BA5305CD93600FFB668 /* GRDB in Frameworks */,
 			);
 		};
 /* End PBXFrameworksBuildPhase section */
@@ -60,6 +71,12 @@
 				009334ED305BF0B60077D2FB /* MKBeaconXPlusSwiftProject */,
 			);
 			name = MKBeaconXPlusSwiftProject;
+			packageProductDependencies = (
+				007A388D305CC7C100FFB668 /* MKSwiftBleModule */,
+				007A3890305CC85C00FFB668 /* MKSwiftBeaconXCustomUI */,
+				007A3893305CC89B00FFB668 /* NordicDFU */,
+				007A3BA4305CD93600FFB668 /* GRDB */,
+			);
 			productName = MKBeaconXPlusSwiftProject;
 			productReference = 009334EB305BF0B60077D2FB /* MKBeaconXPlusSwiftProject.app */;
 			productType = "com.apple.product-type.application";
@@ -88,6 +105,12 @@
 			);
 			mainGroup = 009334E2305BF0B60077D2FB;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				007A388C305CC7C100FFB668 /* XCRemoteSwiftPackageReference "MKSwiftBleModule" */,
+				007A388F305CC85C00FFB668 /* XCRemoteSwiftPackageReference "MKSwiftBeaconXCustomUI" */,
+				007A3892305CC89B00FFB668 /* XCRemoteSwiftPackageReference "IOS-DFU-Library" */,
+				007A3BA3305CD93600FFB668 /* XCRemoteSwiftPackageReference "GRDB" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 009334EC305BF0B60077D2FB /* Products */;
 			projectDirPath = "";
@@ -246,11 +269,13 @@
 				DEVELOPMENT_TEAM = R558LEUW2T;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
+				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = "This app needs Bluetooth to connect and communicate with BLE devices.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -278,11 +303,13 @@
 				DEVELOPMENT_TEAM = R558LEUW2T;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
+				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = "This app needs Bluetooth to connect and communicate with BLE devices.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -320,6 +347,64 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		007A388C305CC7C100FFB668 /* XCRemoteSwiftPackageReference "MKSwiftBleModule" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/MOKO-iOS-Base-Library/MKSwiftBleModule.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.1.2;
+			};
+		};
+		007A388F305CC85C00FFB668 /* XCRemoteSwiftPackageReference "MKSwiftBeaconXCustomUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/MOKO-iOS-Base-Library/MKSwiftBeaconXCustomUI.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.1.0;
+			};
+		};
+		007A3892305CC89B00FFB668 /* XCRemoteSwiftPackageReference "IOS-DFU-Library" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/NordicSemiconductor/IOS-DFU-Library.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.17.0;
+			};
+		};
+		007A3BA3305CD93600FFB668 /* XCRemoteSwiftPackageReference "GRDB" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/groue/GRDB.swift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		007A388D305CC7C100FFB668 /* MKSwiftBleModule */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 007A388C305CC7C100FFB668 /* XCRemoteSwiftPackageReference "MKSwiftBleModule" */;
+			productName = MKSwiftBleModule;
+		};
+		007A3890305CC85C00FFB668 /* MKSwiftBeaconXCustomUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 007A388F305CC85C00FFB668 /* XCRemoteSwiftPackageReference "MKSwiftBeaconXCustomUI" */;
+			productName = MKSwiftBeaconXCustomUI;
+		};
+		007A3893305CC89B00FFB668 /* NordicDFU */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 007A3892305CC89B00FFB668 /* XCRemoteSwiftPackageReference "IOS-DFU-Library" */;
+			productName = NordicDFU;
+		};
+		007A3BA4305CD93600FFB668 /* GRDB */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 007A3BA3305CD93600FFB668 /* XCRemoteSwiftPackageReference "GRDB" */;
+			productName = GRDB;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 009334E3305BF0B60077D2FB /* Project object */;
 	validationLevel = 1;
